@@ -7,11 +7,6 @@ service Return {
 
   rpc GetMoney(AccountPlat) returns (Charge) {}
 
-//  rpc ListFeatures(Rectangle) returns (stream Feature) {}
-//
-//  rpc RecordRoute(stream Point) returns (RouteSummary) {}
-//
-//  rpc RouteChat(stream RouteNote) returns (stream RouteNote) {}
 }
 
 message AccountPlat {
