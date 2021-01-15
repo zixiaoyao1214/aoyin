@@ -33,4 +33,11 @@ init([]) ->
         intensity => MaxRestarts,
         period => MaxSecondsBetweenRestarts},
 
-    {ok, {SupFlags, []}}.
+    Child = #{id => 'aoyin_mgr',
+        start => {'aoyin_mgr', start_link, []},
+        restart => transient,
+        shutdown => infinity,
+        type => supervisor,
+        modules => ['aoyin_mgr']
+    },
+    {ok, {SupFlags, [Child]}}.
