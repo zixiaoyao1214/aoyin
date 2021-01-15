@@ -1,0 +1,28 @@
+
+syntax = "proto3";
+
+package return;
+
+service Return {
+
+  rpc GetMoney(AccountPlat) returns (Charge) {}
+
+//  rpc ListFeatures(Rectangle) returns (stream Feature) {}
+//
+//  rpc RecordRoute(stream Point) returns (RouteSummary) {}
+//
+//  rpc RouteChat(stream RouteNote) returns (stream RouteNote) {}
+}
+
+message AccountPlat {
+  // 玩家账号
+  bytes account = 1;
+
+  // 平台
+  bytes platform = 2;
+}
+
+message Charge {
+  // 充值金额值
+  int32 money = 1;
+}

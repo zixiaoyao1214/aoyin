@@ -1,0 +1,17 @@
+{application, aoyin,
+ [{description, "grpc协议"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {mod, {aoyin_app, []}},
+  {applications,
+   [kernel,
+    stdlib,
+    gproc,
+    grpc
+   ]},
+  {env,[]},
+  {modules, []},
+
+  {licenses, ["Apache 2.0"]},
+  {links, []}
+ ]}.
