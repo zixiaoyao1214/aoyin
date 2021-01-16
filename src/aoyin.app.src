@@ -1,5 +1,5 @@
 {application, aoyin,
- [{description, "grpc协议"},
+ [{description, "grpc protocl"},
   {vsn, "0.1.0"},
   {registered, []},
   {mod, {aoyin_app, []}},
