@@ -20,8 +20,4 @@ apply(M, F, A) ->
     apply(M, F, A, #{timeout => ?default_timeout, channel => ?default_channel}).
 
 apply(M, F, A, Opts) ->
-    try
-        M:F(A, Opts)
-    catch
-        _ -> error
-    end.
+    M:F(A, Opts).
