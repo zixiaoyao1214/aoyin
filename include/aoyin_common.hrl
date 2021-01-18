@@ -4,7 +4,7 @@
 -define(default_channel, default).
 -define(default_service, default).
 
--define(default_timeout, 5000).
+-define(default_timeout, 3000).
 
 -define(assert_grpc(M, F, A), grpc_client_lib:apply(M, F, A)).
 -define(assert_grpc(M, F, A, Opts), grpc_client_lib:apply(M, F, A, Opts)).
