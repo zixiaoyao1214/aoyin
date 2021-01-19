@@ -21,6 +21,5 @@ grpc_get_money(Account, Platform) ->
         {ok, #{money := Money}, _} ->
             Money;
         _ERR ->
-            io:format("~p:~p ==== ~p", [?MODULE, ?LINE, _ERR]),
             0
     end.
