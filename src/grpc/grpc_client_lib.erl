@@ -25,5 +25,5 @@ apply(M, F, A, Opts) ->
         [_] ->
             M:F(A, Opts);
         _ ->
-            {grpc_error, {14, <<"UNAVAILABLE">>}}
+            {error,econnrefused}
     end.
