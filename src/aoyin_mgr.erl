@@ -66,4 +66,4 @@ monitor(Name) ->
         _ ->
             ets:delete(aoyin_client_info, Name)
     end,
-    erlang:send_after(5000, {monitor, Name}, self()).
+    erlang:send_after(5000, self(), {monitor, Name}).
