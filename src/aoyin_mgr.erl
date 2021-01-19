@@ -61,7 +61,7 @@ monitor() ->
 
 monitor(Name) ->
     case grpcbox_health_client:check(<<>>, #{channel => Name}) of
-        {ok, #{status => 'SERVING'}, _} ->
+        {ok, #{status := 'SERVING'}, _} ->
             ets:insert(aoyin_client_info, {Name});
         _ ->
             ets:delete(aoyin_client_info, Name)
