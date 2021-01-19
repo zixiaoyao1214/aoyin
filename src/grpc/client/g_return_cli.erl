@@ -17,10 +17,10 @@
 -spec grpc_get_money(iodata(), iodata()) -> integer().
 grpc_get_money(Account, Platform) ->
     Arg = #{account => Account, platform => Platform},
-    case grpc_return_client:get_money(Arg) of
+    case ?assert_grpc(grpc_return_client, get_money, Arg) of
         {ok, #{money := Money}, _} ->
             Money;
         _ERR ->
-            io:format("~p",[_ERR]),
+            io:format("~p:~p ==== ~p", [?MODULE, ?LINE, _ERR]),
             0
     end.
